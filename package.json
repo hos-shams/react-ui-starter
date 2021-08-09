@@ -1,6 +1,15 @@
 {
   "name": "react-ui-starter",
   "version": "0.0.1",
+  "files": ["dist"],
+  "main": "./dist/ui.umd.js",
+  "module": "./dist/ui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ui.es.js",
+      "require": "./dist/ui.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
